@@ -1,0 +1,4 @@
+# Ignore everything  in .emacs.d except customizations and init
+.emacs.d/*
+!.emacs.d/init.el
+!.emacs.d/customizations/

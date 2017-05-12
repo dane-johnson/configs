@@ -1,0 +1,9 @@
+name: codesplain-lambdas
+root: ~/work/src/codesplain-lambdas/
+pre_window: . codesplain-env/bin/activate
+windows:
+  - default:
+      layout: main-vertical
+      panes:
+        - open -a emacs . && clear
+        - yarn test
