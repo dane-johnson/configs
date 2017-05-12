@@ -2,6 +2,12 @@
 (setenv "PATH" (concat (getenv "PATH") "/usr/local/bin"))
 (setq exec-path (append exec-path '("/usr/local/bin")))
 
+;; Move backups to tmp
+(setq backup-directory-alist
+      `((".*" . ,temporary-file-directory)))
+(setq auto-save-file-name-transforms
+      `((".*" ,temporary-file-directory t)))
+
 ;;Install MELPA
 (require 'package)
 (add-to-list 'package-archives
@@ -13,28 +19,30 @@
 ;; Update packages
 (when (not package-archive-contents)
   (package-refresh-contents))
-;; Move backups to tmp
-(setq backup-directory-alist
-      `((".*" . ,temporary-file-directory)))
-(setq auto-save-file-name-transforms
-      `((".*" ,temporary-file-directory t)))
-;; If its a GUI, load that sweet theme
-(if (display-graphic-p)
-    (load-theme 'atom-one-dark t))
-;; Add custom folder to load path
-(add-to-list 'load-path "~/.emacs.d/customizations")
-(load "editing.el")
-(load "setup-clojure.el")
-(load "setup-elisp.el")
-(load "setup-python.el")
-(load "setup-javascript.el")
-
+;; Enumerate all my favorite packages
+(defvar my-packages
+  '(ace-jump-mode yaml-mode auto-complete yasnippet atom-one-dark-theme
+                  rainbow-delimiters paredit cider clojure-mode-extra-font-locking))
+;; Guard for OX shell login
+(if (eq system-type 'darwin)
+    (add-to-list 'my-packages 'exec-path-from-shell))
+;; Install those tasty packages
+(dolist (p my-packages)
+  (when (not (package-installed-p p))
+    (package-install p)))
 ;; I'm done with the startup screen
 (setq inhibit-startup-screen t)
+
+;; I know what I'm doing with git, leave me alone
+(setq vc-follow-symlinks t)
 
 ;; Let's start in clojure-mode
 ;; (setq initial-major-mode 'clojure-mode)
 ;; Nevermind that was dumb
+
+;; If this is a GUI, load that sweet theme
+(if (display-graphic-p)
+    (load-theme 'atom-one-dark t))
 
 ;; Inconsolata as default font
 (set-default-font "Inconsolata 13")
@@ -53,18 +61,10 @@
 ;; Ace jump mode is super useful, lets bind it
 (define-key global-map (kbd "C-c SPC") 'ace-jump-mode)
 
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages
-   (quote
-    (ace-jump-mode yaml-mode auto-complete yasnippet atom-one-dark-theme rainbow-delimiters paredit cider)))
- '(standard-indent 2))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
+;; Add custom folder to load path
+(add-to-list 'load-path "~/.emacs.d/customizations")
+(load "editing.el")
+(load "setup-clojure.el")
+(load "setup-elisp.el")
+(load "setup-python.el")
+(load "setup-javascript.el")

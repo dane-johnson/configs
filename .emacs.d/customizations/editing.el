@@ -18,6 +18,7 @@
   (mark-whole-buffer)
   (untabify (region-beginning) (region-end))
   (keyboard-quit))
+(custom-set-variables '(standard-indent 2))
 (setq scroll-step 1)
 (if (display-graphic-p)
     (scroll-bar-mode -1))
@@ -26,3 +27,4 @@
 (setq ring-bell-function 'ignore)
 ;; Comment region map to command-/
 (global-set-key (kbd "s-/") (quote comment-or-uncomment-region))
+
