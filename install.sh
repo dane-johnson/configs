@@ -10,7 +10,7 @@ for f in $( ls -a | awk '!/^(.|..|.git|'"$myname"')$/' ); do
 	mkdir "$dest"
 	lndir -silent $(pwd)/"$f" "$dest" #Need pwd because lndir expects fromdir relative to todir
     else
-	ln -s "$f" "$HOME"
+	ln -s $(pwd)/"$f" "$HOME"
     fi
 done
 exit
