@@ -23,8 +23,8 @@ HISTFILESIZE=2000
 # Update window size after each command
 shopt -s checkwinsize
 
-# Use ** for recursive globbling
-shopt -s globstar
+# Use ** for recursive globbling (automatic for OSX)
+##shopt -s globstar
 
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
