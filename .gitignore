@@ -1,5 +1,9 @@
-# Ignore everything  in .emacs.d except customizations and init
+# Ignore everything in .emacs.d except customizations and init
 .emacs.d/*
 !.emacs.d/init.el
 !.emacs.d/customizations/
 !.emacs.d/snippets/
+
+# Ignore everything in .lein except profiles
+.lein/*
+!.lein/profiles.clj
