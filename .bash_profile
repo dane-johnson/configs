@@ -6,9 +6,6 @@ if [ -f ~/.git-completion.bash ]; then
   . ~/.git-completion.bash
 fi
 
-
-export DISPLAY=:0
-
 export GOPATH=$HOME/work
 # prompt
 PS1="$ "
