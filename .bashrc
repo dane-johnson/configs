@@ -37,4 +37,4 @@ fi
 # Flush that ugly ass prompt, use el classico
 PS1="$ "
 # Emacs is love, emacs is life
-export EDITOR=emacs
+export EDITOR='emacs -nw'
