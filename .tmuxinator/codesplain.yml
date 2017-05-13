@@ -1,9 +1,0 @@
-name: codesplain
-root: ~/work/src/codesplainUI/
-windows:
-  - default:
-      layout: b5da,318x76,0,0{159x76,0,0,0,158x76,160,0[158x51,160,0,1,158x24,160,52,2]}
-      panes:
-        - atom -a . && clear
-        - yarn test
-        - yarn start
