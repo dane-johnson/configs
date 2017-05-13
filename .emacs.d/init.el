@@ -36,10 +36,6 @@
 ;; I know what I'm doing with git, leave me alone
 (setq vc-follow-symlinks t)
 
-;; Let's start in clojure-mode
-;; (setq initial-major-mode 'clojure-mode)
-;; Nevermind that was dumb
-
 ;; If this is a GUI, load that sweet theme
 (if (display-graphic-p)
     (load-theme 'atom-one-dark t))
