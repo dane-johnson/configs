@@ -44,6 +44,7 @@
 !*.colorUL:
 
 URxvt.font: xft:Inconsolata:size=11,xft:DejaVu Sans:size=11
+URxvt*letterSpace:0
 URxvt.scrollBar: false
 
 XTerm*faceName: Inconsolata:size=11
