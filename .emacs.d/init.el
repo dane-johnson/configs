@@ -65,6 +65,7 @@
 (load "setup-elisp.el")
 (load "setup-python.el")
 (load "setup-javascript.el")
+(load "setup-coffeescript.el")
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
