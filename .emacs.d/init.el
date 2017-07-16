@@ -22,7 +22,8 @@
 ;; Enumerate all my favorite packages
 (defvar my-packages
   '(ace-jump-mode yaml-mode auto-complete yasnippet atom-one-dark-theme
-                  rainbow-delimiters paredit cider clojure-mode-extra-font-locking))
+                  rainbow-delimiters paredit cider coffee-mode
+                  clojure-mode-extra-font-locking))
 ;; Guard for OX shell login
 (if (eq system-type 'darwin)
     (add-to-list 'my-packages 'exec-path-from-shell))
