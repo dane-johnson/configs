@@ -28,4 +28,4 @@
 (setq ring-bell-function 'ignore)
 ;; Comment region map to command-/
 (global-set-key (kbd "s-/") (quote comment-or-uncomment-region))
-
+(global-auto-revert-mode 1)
