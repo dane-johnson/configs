@@ -23,7 +23,7 @@
 (defvar my-packages
   '(ace-jump-mode yaml-mode auto-complete yasnippet atom-one-dark-theme
                   rainbow-delimiters paredit cider coffee-mode
-                  clojure-mode-extra-font-locking))
+                  clojure-mode-extra-font-locking markdown-mode))
 ;; Guard for OX shell login
 (if (eq system-type 'darwin)
     (add-to-list 'my-packages 'exec-path-from-shell))
