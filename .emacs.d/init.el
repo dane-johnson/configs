@@ -21,7 +21,7 @@
   (package-refresh-contents))
 ;; Enumerate all my favorite packages
 (defvar my-packages
-  '(ace-jump-mode yaml-mode auto-complete yasnippet atom-one-dark-theme
+  '(ace-jump-mode yaml-mode auto-complete yasnippet foggy-night-theme
                   rainbow-delimiters paredit cider coffee-mode
                   clojure-mode-extra-font-locking markdown-mode))
 ;; Guard for OX shell login
@@ -39,7 +39,7 @@
 
 ;; If this is a GUI, load that sweet theme
 (if (display-graphic-p)
-    (load-theme 'atom-one-dark t))
+    (load-theme 'foggy-night t))
 
 ;; Inconsolata as default font
 (set-default-font "Inconsolata 13")
@@ -71,9 +71,13 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(coffee-tab-width 2)
+ '(custom-safe-themes
+   (quote
+    ("d606ac41cdd7054841941455c0151c54f8bff7e4e050255dbd4ae4d60ab640c1" "08b8807d23c290c840bbb14614a83878529359eaba1805618b3be7d61b0b0a32" "0ee3fc6d2e0fc8715ff59aed2432510d98f7e76fe81d183a0eb96789f4d897ca" default)))
  '(package-selected-packages
    (quote
-    (clojure-mode-extra-font-locking cider paredit rainbow-delimiters atom-one-dark-theme yasnippet auto-complete yaml-mode ace-jump-mode)))
+    (foggy-night-theme clojure-mode-extra-font-locking cider paredit rainbow-delimiters yasnippet auto-complete yaml-mode ace-jump-mode)))
  '(standard-indent 2))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
