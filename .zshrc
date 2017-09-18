@@ -44,11 +44,12 @@ ZSH_THEME="theunraveler"
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 # HIST_STAMPS="mm/dd/yyyy"
 
-# Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
+# I want to import some custom packages, so I'll set ZSH_CUSTOM early
+ZSH_CUSTOM=~/.oh-my-zsh/custom
 
 # zsh-autosuggestions doesn't ship with ohmyzsh, get it from source
 if [ ! -d $ZSH_CUSTOM/plugins/zsh-autosuggestions ]; then
+    mkdir -p $ZSH_CUSTOM/plugins/zsh-autosuggestions
     git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
 fi
 
