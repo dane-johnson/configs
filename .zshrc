@@ -47,6 +47,11 @@ ZSH_THEME="theunraveler"
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
+# zsh-autosuggestions doesn't ship with ohmyzsh, get it from source
+if [ ! -d $ZSH_CUSTOM/plugins/zsh-autosuggestions ]; then
+    git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
+fi
+
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
@@ -85,6 +90,7 @@ export LANG=en_US.UTF-8
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias fuck="git checkout -- ."
+alias xclip="xclip -selection c"
 
 # Emacs is love, emacs is life
 export EDITOR='emacs -nw -q'
