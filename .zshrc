@@ -2,7 +2,7 @@
   export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/dane/.oh-my-zsh
+  export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -89,3 +89,4 @@ alias fuck="git checkout -- ."
 # Emacs is love, emacs is life
 export EDITOR='emacs -nw -q'
 # (q because my setup is taking a while these days)
+export ANDROID_HOME="$HOME/Library/Android/sdk"
