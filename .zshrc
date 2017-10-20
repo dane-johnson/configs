@@ -1,8 +1,8 @@
 # If you come from bash you might have to change your $PATH.
-  export PATH=$HOME/bin:/usr/local/bin:$PATH
+  export PATH=~/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/dane/.oh-my-zsh
+  export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -44,14 +44,20 @@ ZSH_THEME="theunraveler"
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 # HIST_STAMPS="mm/dd/yyyy"
 
-# Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
+# I want to import some custom packages, so I'll set ZSH_CUSTOM early
+ZSH_CUSTOM=~/.oh-my-zsh/custom
+
+# zsh-autosuggestions doesn't ship with ohmyzsh, get it from source
+if [ ! -d $ZSH_CUSTOM/plugins/zsh-autosuggestions ]; then
+    mkdir -p $ZSH_CUSTOM/plugins/zsh-autosuggestions
+    git clone https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
+fi
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git lein zsh-autosuggestions)
+plugins=(sudo git lein zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
