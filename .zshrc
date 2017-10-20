@@ -95,3 +95,4 @@ alias fuck="git checkout -- ."
 # Emacs is love, emacs is life
 export EDITOR='emacs -nw -q'
 # (q because my setup is taking a while these days)
+export ANDROID_HOME="$HOME/Library/Android/sdk"
