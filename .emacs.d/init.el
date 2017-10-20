@@ -22,8 +22,9 @@
 ;; Enumerate all my favorite packages
 (defvar my-packages
   '(ace-jump-mode yaml-mode auto-complete yasnippet foggy-night-theme
-                  rainbow-delimiters paredit cider coffee-mode
-                  clojure-mode-extra-font-locking markdown-mode))
+                  rainbow-delimiters paredit cider coffee-mode jsx-mode
+                  clojure-mode-extra-font-locking markdown-mode
+                  sudo-edit web-mode))
 ;; Guard for OX shell login
 (if (eq system-type 'darwin)
     (add-to-list 'my-packages 'exec-path-from-shell))
@@ -77,7 +78,7 @@
     ("d606ac41cdd7054841941455c0151c54f8bff7e4e050255dbd4ae4d60ab640c1" "08b8807d23c290c840bbb14614a83878529359eaba1805618b3be7d61b0b0a32" "0ee3fc6d2e0fc8715ff59aed2432510d98f7e76fe81d183a0eb96789f4d897ca" default)))
  '(package-selected-packages
    (quote
-    (foggy-night-theme clojure-mode-extra-font-locking cider paredit rainbow-delimiters yasnippet auto-complete yaml-mode ace-jump-mode)))
+    (lua-mode sudo-edit foggy-night-theme clojure-mode-extra-font-locking cider paredit rainbow-delimiters yasnippet auto-complete yaml-mode ace-jump-mode)))
  '(standard-indent 2))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
