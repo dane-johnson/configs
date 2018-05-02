@@ -3,4 +3,5 @@
 (add-hook 'python-mode-hook 'elpy-enable)
 (setq python-shell-interpreter "ipython2"
       python-shell-interpreter-args "-i --simple-prompt")
+(setq elpy-shell-use-project-root nil)
 (setq python-indent-offset 2)

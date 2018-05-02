@@ -26,6 +26,7 @@
 (menu-bar-mode -1)
 (tool-bar-mode -1)
 (blink-cursor-mode 0)
+(setq visible-cursor nil)
 (setq ring-bell-function 'ignore)
 ;; Comment region map to command-/
 (global-set-key (kbd "s-/") (quote comment-or-uncomment-region))
