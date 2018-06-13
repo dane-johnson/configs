@@ -1,5 +1,6 @@
 (add-hook 'clojure-mode-hook 'enable-paredit-mode)
 (add-hook 'clojure-mode-hook #'rainbow-delimiters-mode)
+(add-hook 'clojure-mode-hook 'turn-on-eldoc-mode)
 (add-hook 'cider-repl-mode-hook 'paredit-mode)
 (setq cider-repl-display-help-banner nil)
 (add-to-list 'interpreter-mode-alist '("boot" . clojure-mode))
