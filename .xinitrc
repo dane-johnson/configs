@@ -12,6 +12,6 @@ xset s off
 numlockx &
 compton -b --config .compton.conf
 redshift &
-xscreensaver --nosplash &
+xscreensaver -nosplash &
 feh --bg-scale bg/whale.jpg
 exec i3

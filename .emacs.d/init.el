@@ -62,6 +62,7 @@
 ;; Add custom folder to load path
 (add-to-list 'load-path "~/.emacs.d/customizations")
 (load "editing.el")
+(load "setup-c.el")
 (load "setup-clojure.el")
 (load "setup-elisp.el")
 (load "setup-python.el")
