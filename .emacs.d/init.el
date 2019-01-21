@@ -22,7 +22,7 @@
 ;; Enumerate all my favorite packages
 (defvar my-packages
   '(ace-jump-mode yaml-mode auto-complete yasnippet zenburn-theme
-                  rainbow-delimiters paredit cider coffee-mode jsx-mode
+                  rainbow-delimiters paredit cider coffee-mode web-mode
                   clojure-mode-extra-font-locking markdown-mode
                   sudo-edit web-mode csharp-mode elpy))
 ;; Guard for OX shell login
@@ -86,7 +86,7 @@
     ("#CC9393" "#DFAF8F" "#F0DFAF" "#7F9F7F" "#BFEBBF" "#93E0E3" "#94BFF3" "#DC8CC3")))
  '(package-selected-packages
    (quote
-    (auctex ess elpy yasnippet-snippets lua-mode sudo-edit foggy-night-theme clojure-mode-extra-font-locking cider paredit rainbow-delimiters yasnippet auto-complete yaml-mode ace-jump-mode)))
+    (smart-tabs-mode bison-mode yasnippet-classic-snippets auctex ess elpy yasnippet-snippets lua-mode sudo-edit foggy-night-theme clojure-mode-extra-font-locking cider paredit rainbow-delimiters yasnippet auto-complete yaml-mode ace-jump-mode)))
  '(pdf-view-midnight-colors (quote ("#DCDCCC" . "#383838")))
  '(standard-indent 2)
  '(vc-annotate-background "#2B2B2B")
