@@ -19,7 +19,6 @@
   (mark-whole-buffer)
   (untabify (region-beginning) (region-end))
   (keyboard-quit))
-(smart-tabs-insinuate 'c)
 (custom-set-variables '(standard-indent 2))
 (setq scroll-step 1)
 (if (display-graphic-p)
