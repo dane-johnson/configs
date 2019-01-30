@@ -21,9 +21,9 @@
   (package-refresh-contents))
 ;; Enumerate all my favorite packages
 (defvar my-packages
-  '(ace-jump-mode yaml-mode auto-complete yasnippet foggy-night-theme
+  '(ace-jump-mode yaml-mode auto-complete yasnippet zenburn-theme
                   rainbow-delimiters paredit cider coffee-mode jsx-mode
-                  clojure-mode-extra-font-locking markdown-mode
+                  clojure-mode-extra-font-locking markdown-mode web-mode
                   sudo-edit web-mode))
 ;; Guard for OX shell login
 (if (eq system-type 'darwin)
@@ -40,7 +40,7 @@
 
 ;; If this is a GUI, load that sweet theme
 (if (display-graphic-p)
-    (load-theme 'foggy-night t))
+    (load-theme 'zenburn t))
 
 ;; Inconsolata as default font
 (set-default-font "Inconsolata 13")
