@@ -39,3 +39,7 @@ PS1="$ "
 # Emacs is love, emacs is life
 export EDITOR='emacs -nw -q'
 # (q because my setup is taking a while these days)
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
