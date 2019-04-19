@@ -22,9 +22,9 @@
 ;; Enumerate all my favorite packages
 (defvar my-packages
   '(ace-jump-mode yaml-mode auto-complete yasnippet zenburn-theme
-                  rainbow-delimiters paredit cider coffee-mode jsx-mode
-                  clojure-mode-extra-font-locking markdown-mode web-mode
-                  sudo-edit web-mode flycheck))
+                  rainbow-delimiters paredit cider coffee-mode
+                  clojure-mode-extra-font-locking markdown-mode
+                  sudo-edit web-mode flycheck elpy ag projectile))
 ;; Guard for OX shell login
 (if (eq system-type 'darwin)
     (progn (add-to-list 'my-packages 'exec-path-from-shell)
