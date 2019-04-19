@@ -31,3 +31,8 @@
 ;; Comment region map to command-/
 (global-set-key (kbd "s-/") (quote comment-or-uncomment-region))
 (global-auto-revert-mode 1)
+;; Setup projectile mode
+(require 'projectile)
+(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
+(projectile-mode +1)
+(setq projectile-completion-system 'ivy)
