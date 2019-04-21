@@ -21,7 +21,7 @@
   (package-refresh-contents))
 ;; Enumerate all my favorite packages
 (defvar my-packages
-  '(ace-jump-mode yaml-mode auto-complete yasnippet zenburn-theme
+  '(ace-jump-mode yaml-mode company yasnippet zenburn-theme
                   rainbow-delimiters paredit cider coffee-mode
                   clojure-mode-extra-font-locking markdown-mode
                   sudo-edit web-mode flycheck elpy ag projectile))
