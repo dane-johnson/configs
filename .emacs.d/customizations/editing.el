@@ -31,3 +31,5 @@
 (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
 (projectile-mode +1)
 (setq projectile-completion-system 'ivy)
+;; Some scrubs want line numbers for pairing
+(global-set-key (kbd "C-c l") 'global-display-line-numbers-mode)
