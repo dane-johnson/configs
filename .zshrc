@@ -93,7 +93,7 @@ export LANG=en_US.UTF-8
 alias fuck="git checkout -- ."
 
 # Emacs is love, emacs is life
-export EDITOR='emacs -nw -q'
+export EDITOR='emacs -nw -q -eval "(setq enable-dir-local-variables nil)"'
 # (q because my setup is taking a while these days)
 export ANDROID_HOME="$HOME/Library/Android/sdk"
 
