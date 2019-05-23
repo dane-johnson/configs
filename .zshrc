@@ -90,5 +90,5 @@ alias fuck="git checkout -- ."
 alias xclip="xclip -selection c"
 
 # Emacs is love, emacs is life
-export EDITOR='emacs -nw -q'
+export EDITOR='emacs -nw -q -eval "(setq enable-dir-local-variables nil)"'
 # (q because my setup is taking a while these days)
