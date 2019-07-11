@@ -34,3 +34,7 @@
 (setq projectile-completion-system 'ivy)
 ;; Some scrubs want line numbers for pairing
 (global-set-key (kbd "C-c l") 'global-display-line-numbers-mode)
+;; I am the scrub who wants code folding
+(require 'hideshow)
+(add-hook 'prog-mode-hook 'hs-minor-mode)
+(define-key hs-minor-mode-map (kbd "C-c f") 'hs-toggle-hiding)
