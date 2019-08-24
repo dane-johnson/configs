@@ -10,6 +10,8 @@
 
 ;;Install MELPA
 (require 'package)
+;; Fix bug in emacs 26.2
+(setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3")
 (add-to-list 'package-archives
 	     '("melpa" . "http://melpa.org/packages/"))
 (when (< emacs-major-version 24)
